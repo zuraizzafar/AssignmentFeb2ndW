@@ -7,7 +7,7 @@ function question1() {
         document.getElementById("question1-answer").innerText = encCC;
     }
     else
-        alert("Enter Credit Card in supported format! (16 Digits)");
+        alert("Enter Credit Card in supported format! (16 Digits), you entered " + ccNum.length + " digits.");
 }
 function question2() {
     var input = document.getElementById("question2");
@@ -21,7 +21,7 @@ function question2() {
     else {
         alert("String doesnt have potatoes in it...");
     }
-    document.getElementById("question2-answer").innerText = i;
+    document.getElementById("question2-answer").innerText = "Number of potatoes in string are/is: " + i;
 }
 function question3() {
     var input = document.getElementById("question3");
@@ -70,7 +70,7 @@ function question5() {
             cost = 1.5;
         }
         var bill = cost * units;
-        var netBill = bill + ((bill * 20)/100);
+        var netBill = bill + ((bill * 20) / 100);
         document.getElementById("question5-answer").innerText = netBill;
     }
 }
@@ -78,7 +78,7 @@ function question5() {
 function question6() {
     var input = document.getElementById("question6");
     var limmit = parseInt(input.value);
-    if (limmit == NaN || (limmit >=0 && limmit < 5)) {
+    if (limmit == NaN || (limmit >= 0 && limmit < 5)) {
         alert("You entered " + limmit + ", which cannot be processed... Default limmit of 1000 is being processed!");
         limmit = 1000;
     }
@@ -89,4 +89,22 @@ function question6() {
         }
     }
     document.getElementById("question6-answer").innerText = sum;
+}
+function question8() {
+    var input1 = document.getElementById("question8-1");
+    var input2 = document.getElementById("question8-2");
+    var searcher = input1.value;
+    var string = input2.value;
+    if (searcher.length > 1) {
+        alert("Enter one character only!");
+    }
+    else {
+        var count = 0;
+        for (let i = 0; i < string.length; i++) {
+            if (string[i] == searcher) {
+                count++;
+            }
+        }
+        document.getElementById("question8-answer").innerText = "Character '" + searcher + "' occured " + count + " time/s.";
+    }
 }
