@@ -74,3 +74,19 @@ function question5() {
         document.getElementById("question5-answer").innerText = netBill;
     }
 }
+
+function question6() {
+    var input = document.getElementById("question6");
+    var limmit = parseInt(input.value);
+    if (limmit == NaN || (limmit >=0 && limmit < 5)) {
+        alert("You entered " + limmit + ", which cannot be processed... Default limmit of 1000 is being processed!");
+        limmit = 1000;
+    }
+    var sum = 0;
+    for (let i = 1; i < limmit; i++) {
+        if (i % 3 == 0 || i % 5 == 0) {
+            sum += i;
+        }
+    }
+    document.getElementById("question6-answer").innerText = sum;
+}
