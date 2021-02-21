@@ -23,3 +23,13 @@ function question2() {
     }
     document.getElementById("question2-answer").innerText = i;
 }
+function question3() {
+    var input = document.getElementById("question3");
+    var str = input.value;
+    var length = str.length;
+    let answer = "";
+    for (let i = 0; i < length; i++){
+        answer += str[i] + str[i];
+    }
+    document.getElementById("question3-answer").innerText = answer;
+}
