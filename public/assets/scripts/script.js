@@ -33,3 +33,21 @@ function question3() {
     }
     document.getElementById("question3-answer").innerText = answer;
 }
+function question4() {
+    var input = document.getElementById("question4");
+    var salary = parseInt(input.value);
+    var gross = 0;
+    if (salary == "") {
+        alert("Enter Salary!");
+    }
+    if (salary <= 10000) {
+        gross = salary + (salary * (20 + 80)/100);
+    }
+    else if (salary <= 20000) {
+        gross = salary + (salary * (25 + 90)/100);
+    }
+    else if (salary > 20000) {
+        gross = salary + (salary * (30 + 95)/100);
+    }
+    document.getElementById("question4-answer").innerText = gross;
+}
